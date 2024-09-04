@@ -35,7 +35,8 @@ class StockMarket:
                 self.price = new_price
                 self.notify_subscribers()
                 self.update_count += 1
-            # Check if 60 seconds have passed or 3 updates have been sent
+            # Check if 60 seconds have passed 
+            
             elapsed_time = time.time() - start_time
             if elapsed_time >= 60 or self.update_count >= 3:
                 self.running = False
